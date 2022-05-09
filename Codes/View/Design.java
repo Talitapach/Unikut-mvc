@@ -1,6 +1,6 @@
-package View;
+package Codes.View;
 
-public class Access {
+public class Design {
     
     public void interfaceInicial(){
         System.out.println("  _    _       _ _          _   \n" +
@@ -14,6 +14,7 @@ public class Access {
         System.out.println("Please, choose a option");
         System.out.println("1 - Login");
         System.out.println("2 - Sign up");
+        System.out.println("3 - Finish Program");
     }
 
     public void interfaceLogin(){
