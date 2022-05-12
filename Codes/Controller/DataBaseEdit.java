@@ -1,5 +1,6 @@
 package Codes.Controller;
 import Codes.Model.Account;
+import Codes.Model.DataBase;
 
 public class DataBaseEdit {
     public boolean EditAccount(String edit, String user, String pass, int i, DataBase data){

@@ -1,16 +1,18 @@
 package Codes.View;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import Codes.Controller.DataBase;
+
+import Codes.Controller.AccountFriends;
+import Codes.Controller.AccountMessage;
 import Codes.Controller.DataBaseEdit;
 import Codes.Controller.DataBaseLogin;
 import Codes.Model.Account;
-import Codes.Model.AccountFriends;
-import Codes.Model.AccountMessage;
+import Codes.Model.DataBase;
 
 public class Main{
     public static void main(String[] args) {
         
+        //Objects
         Design interfaceUnikut = new Design();
         DataBase data = new DataBase();
         DataBaseLogin login = new DataBaseLogin();
@@ -113,7 +115,7 @@ public class Main{
                                 if (acc.getMessagesAccounts().isEmpty()) {
                                     System.out.println("You have no messages");
                                 }else{
-                                    messages.ShowMessages(acc);
+                                    messages.Show(acc);
                                     acc.getMessagesAccounts().clear();
                                 }
                                 break; 
@@ -156,7 +158,7 @@ public class Main{
                                 if (acc.getFriends().isEmpty()) {
                                     System.out.println("You have no friends");
                                 }else{
-                                    friends.ShowFriends(acc);
+                                    friends.Show(acc);
                                 }
                                 break; 
                             case 8:
@@ -186,7 +188,13 @@ public class Main{
                     String name = s.nextLine();
                     name = s.nextLine();
                     Account newAccount = new Account (username, password, name);
-                    data.CreateAccount(newAccount);
+                    Thread a = new Thread(new DataBase(newAccount, data));
+                    a.start();
+                    try {
+                        a.join();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                   break;
 
               case 3: 

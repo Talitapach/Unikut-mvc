@@ -1,7 +1,10 @@
-package Codes.Model;
-import Codes.Controller.DataBase;
+package Codes.Controller;
 
-public class AccountFriends {
+import Codes.Model.Account;
+import Codes.Model.DataBase;
+import Codes.Model.Print;
+
+public class AccountFriends implements Print<Account>{
    
     public boolean Request(Account acc, String User, DataBase data){
         for (Account account : data.getAccounts()) {
@@ -40,7 +43,8 @@ public class AccountFriends {
         return false;
     }
 
-    public void ShowFriends(Account acc){
+    @Override
+    public void Show(Account acc){
         for (int index = 0; index < acc.getFriends().size(); index++) {
             Account account = acc.getFriends().get(index);
             System.out.println(index + " - " + account.getName() + ": @" + account.getUsername());      

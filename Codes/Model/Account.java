@@ -20,7 +20,7 @@ public class Account {
         return this.friends;
     }
 
-    public Account (String username, String password, String name ){
+    public Account (String username, String password, String name){
         this.username = username;
         this.password = password;
         this.name = name;

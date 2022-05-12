@@ -1,7 +1,10 @@
-package Codes.Model;
-import Codes.Controller.DataBase;
+package Codes.Controller;
 
-public class AccountMessage {
+import Codes.Model.Account;
+import Codes.Model.DataBase;
+import Codes.Model.Print;
+
+public class AccountMessage implements Print<Account>{
     
     public boolean Message(Account acc, String User, DataBase data, String message){
         for (Account account : acc.getFriends()) {
@@ -13,7 +16,8 @@ public class AccountMessage {
         return false;
     }
 
-    public void ShowMessages(Account acc){
+    @Override
+    public void Show(Account acc){
         for (String message: acc.getMessagesAccounts()) {
             System.out.println(message);
         }
