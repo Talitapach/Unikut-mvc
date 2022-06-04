@@ -31,7 +31,7 @@ public class ViewLogin {
                     }
                     ViewInterface.homeScreen();
                     option = s.nextInt();
-                    while (option < 1 || option > 7) {
+                    while (option < 1 || option > 8) {
                         ViewInterface.homeScreen();
                         option = s.nextInt();
                     }
@@ -61,10 +61,14 @@ public class ViewLogin {
                             System.out.println("\n");
                             break;
                         case 7:
+                            ViewSearch.search(userName);
+                            System.out.println("\n");
+                            break;
+                        case 8:
                             break;
 
                     }
-                }while(option != 7 && option != 1); 
+                }while(option != 8 && option != 1); 
             }else{
                 System.out.println("You have entered a invalid username or password");
             }

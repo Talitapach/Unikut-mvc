@@ -27,7 +27,8 @@ public class ViewInterface {
         System.out.println("4 - Messages");
         System.out.println("5 - Requests");
         System.out.println("6 - Posts");
-        System.out.println("7 - Log out");
+        System.out.println("7 - Search a user");
+        System.out.println("8 - Log out");
     }
 
     public static void homeFriends(){
