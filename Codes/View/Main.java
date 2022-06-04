@@ -12,6 +12,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         Singleton.getInstance();
+        Singleton.getInstanceAdm();
+        Singleton.getInstanceCommon();
         int option;
         try {
           do {

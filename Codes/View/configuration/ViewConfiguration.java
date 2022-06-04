@@ -3,6 +3,7 @@ package Codes.View.configuration;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import Codes.Model.entities.Common;
 import Codes.Model.entities.Singleton;
 import Codes.View.design.ViewInterface;
 
@@ -12,6 +13,8 @@ public class ViewConfiguration {
   public static void Configuration(String userName, String password, boolean isAdmin) {
     System.out.println("\n");
     Singleton.getInstance();
+    Singleton.getInstanceAdm();
+    Singleton.getInstanceCommon();
     if (isAdmin) {
       ViewInterface.configurationAdmin();
     } else {
@@ -58,8 +61,16 @@ public class ViewConfiguration {
           case 5:
             System.out.println("What's the username of the account you want to delete? ");
             String accountToDelete = s.next();
-            Singleton.remove(accountToDelete);
-            System.out.println("Account deleted successfully!");
+            for (Common user : Singleton.getCommonAccounts()) {
+              if (accountToDelete.equals(user.getUserName())) {
+                Singleton.remove(accountToDelete);
+                System.out.println("Account deleted successfully!");
+              } else {
+                System.out.println("You cannot delete another admin account");
+              }
+            }
+           
+            
             break;
           case 6:
             break;

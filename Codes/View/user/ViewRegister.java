@@ -2,8 +2,9 @@ package Codes.View.user;
 
 import java.util.Scanner;
 
+import Codes.Model.entities.AdminUser;
+import Codes.Model.entities.CommonUser;
 import Codes.Model.entities.Singleton;
-import Codes.Model.entities.User;
 import Codes.Model.utils.validation.PasswordValidation;
 import Codes.Model.utils.validation.UserNameValidation;
 
@@ -12,6 +13,8 @@ public class ViewRegister {
 
     public static void Register(){
         Singleton.getInstance();
+        Singleton.getInstanceAdm();
+        Singleton.getInstanceCommon();
         System.out.print("Create a Username: ");
         String userName = s.next();
 
@@ -37,9 +40,12 @@ public class ViewRegister {
         int option;
         option = s.nextInt();
         if(option == 1){
-          Singleton.add(new User(name, userName, password, true));
+          AdminUser user = new AdminUser(name, userName, password);
+          Singleton.addAdm(user.getResult());
         }else {
-          Singleton.add(new User(name, userName, password, false));
+          CommonUser user = new CommonUser(name, userName, password);
+          Singleton.addCommonUser(user.getResult());
+          // Singleton.addCommonUser(new Common(name, userName, password, false));
         }
 
         // Singleton.add(new User(name, userName, password));
