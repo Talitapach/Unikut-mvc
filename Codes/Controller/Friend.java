@@ -8,8 +8,8 @@ import Codes.Model.entities.User;
 
 public class Friend extends User{
 
-    public Friend(String name, String userName, String password){
-        super(name, userName, password);
+    public Friend(String name, String userName, String password, boolean admin){
+        super(name, userName, password, admin);
     }
     
     @Override

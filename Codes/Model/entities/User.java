@@ -8,6 +8,7 @@ public class User{
     private String name;
     private String userName;
     private String password;
+    private boolean admin;
     protected List<User> friends;
     protected List<User> friendsRequest;
     protected List<Post> posts;
@@ -15,10 +16,11 @@ public class User{
     protected List<Comment> notifications;
 
 
-    public User(String name, String userName, String password) {
+    public User(String name, String userName, String password, boolean admin) {
         this.name = name;
         this.userName = userName;
         this.password = password;
+        this.admin = admin;
         friends = new ArrayList<>();
         friendsRequest = new ArrayList<>();
         posts = new ArrayList<>();
@@ -26,6 +28,9 @@ public class User{
         notifications = new ArrayList<>();
     }
 
+    public boolean getAdmin() {
+      return this.admin;
+    }
 
     public String getName() {
         return this.name;

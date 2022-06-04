@@ -7,8 +7,8 @@ public final class Singleton extends User{
     private static List<User> accounts;
 
    
-    public Singleton(String name, String userName, String password) {
-        super(name, userName, password);
+    public Singleton(String name, String userName, String password, boolean admin) {
+        super(name, userName, password, admin);
     }
     
     public static List<User> getAccounts() {

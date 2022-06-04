@@ -12,7 +12,7 @@ public class ViewInterface {
         "  \\____/|_| |_|_|_|\\_\\\\__,_|\\__|");
         System.out.println("");
         System.out.println("Wellcome");
-        System.out.println("Please, choose a option");
+        System.out.println("Please, choose an option");
         System.out.println("1 - Login");
         System.out.println("2 - Sign up");
         System.out.println("3 - Finish Program");
@@ -22,7 +22,7 @@ public class ViewInterface {
     public static void homeScreen(){
         System.out.println(Datee.calendar());
         System.out.println("1 - Configurations");
-        System.out.println("2 - Perfil");
+        System.out.println("2 - Profile");
         System.out.println("3 - Friends");
         System.out.println("4 - Messages");
         System.out.println("5 - Requests");
@@ -61,4 +61,13 @@ public class ViewInterface {
         System.out.println("4 - Delete your Account");
         System.out.println("5 - EXIT");
     }
+    public static void configurationAdmin(){
+      System.out.println("Menu Configuration");
+      System.out.println("1 - Change your Name");
+      System.out.println("2 - Change Your UserName");
+      System.out.println("3 - Chage your Password");
+      System.out.println("4 - Delete your Account");
+      System.out.println("5 - Delete another Account");
+      System.out.println("6 - EXIT");
+  }
 }

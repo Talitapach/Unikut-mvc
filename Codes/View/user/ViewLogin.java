@@ -20,6 +20,7 @@ public class ViewLogin {
         boolean b = Login.verificationLogin(userName, password);
         try{
             if (b) {
+                boolean isAdmin = Singleton.searchUser(userName).getAdmin();
                 System.out.println("\n");
                 System.out.println("Wellcome back " + Singleton.searchUser(userName).getName() + "!");
                 do{
@@ -37,7 +38,7 @@ public class ViewLogin {
                     }
                     switch(option) {
                         case 1:
-                            ViewConfiguration.Configuration(userName, password);
+                            ViewConfiguration.Configuration(userName, password, isAdmin);
                             System.out.println("\n");
                             break;
                         case 2:    
@@ -70,7 +71,7 @@ public class ViewLogin {
                     }
                 }while(option != 8 && option != 1); 
             }else{
-                System.out.println("You have entered a invalid username or password");
+                System.out.println("You have entered an invalid username or password");
             }
         
         }catch(InputMismatchException ex){
