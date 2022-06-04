@@ -1,7 +1,7 @@
 <h1 align="center">UNIKUT</h1>
 
 <p align="center">
-  <img src="src/model/utils/images/Unicap_Icam_Tech-01.png" alt="drawing" width="200"/>
+  <img src="Codes/Model/utils/images/Unicap_Icam_Tech-01.png" alt="drawing" width="200"/>
 </p>
 
 <br>
