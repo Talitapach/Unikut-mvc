@@ -59,7 +59,7 @@ public class ViewConfiguration {
             }while(option != 1 && option != 2 && option != 3 && option != 4 && option != 5);
         }catch(InputMismatchException ex){
             System.out.println("You have entered a different type of read");
-            System.out.println("Critical error has occored");
+            System.out.println("Critical error has occurred");
             System.out.println(" :C ");
         }
         System.out.println("\n");
