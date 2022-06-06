@@ -59,7 +59,7 @@ public class ViewInterface {
         System.out.println("2 - Change Your UserName");
         System.out.println("3 - Chage your Password");
         System.out.println("4 - Delete your Account");
-        System.out.println("5 - EXIT");
+        System.out.println("0 - EXIT");
     }
     public static void configurationAdmin(){
       System.out.println("Menu Configuration");
@@ -68,6 +68,6 @@ public class ViewInterface {
       System.out.println("3 - Chage your Password");
       System.out.println("4 - Delete your Account");
       System.out.println("5 - Delete another Account");
-      System.out.println("6 - EXIT");
+      System.out.println("0 - EXIT");
   }
 }

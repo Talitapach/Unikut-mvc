@@ -59,6 +59,10 @@ public class ViewConfiguration {
             }
             break;
           case 5:
+            if (!isAdmin) {
+              System.out.println("Cannot do");
+              return;
+            }
             System.out.println("What's the username of the account you want to delete? ");
             String accountToDelete = s.next();
             for (Common user : Singleton.getCommonAccounts()) {
@@ -72,7 +76,7 @@ public class ViewConfiguration {
            
             
             break;
-          case 6:
+          case 0:
             break;
         }
       } while (option != 1 && option != 2 && option != 3 && option != 4 && option != 5);
