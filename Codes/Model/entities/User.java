@@ -13,7 +13,6 @@ public class User{
     protected List<User> friendsRequest;
     protected List<Post> posts;
     protected List<Comment> messages;
-    protected List<Comment> notifications;
 
 
     public User(String name, String userName, String password, boolean admin) {
@@ -25,7 +24,6 @@ public class User{
         friendsRequest = new ArrayList<>();
         posts = new ArrayList<>();
         messages = new ArrayList<>();
-        notifications = new ArrayList<>();
     }
 
     public boolean getAdmin() {
@@ -71,13 +69,6 @@ public class User{
     public List<Comment> getMessages() {
         return messages;
     }
-
-    public List<Comment> getNotifications() {
-        return notifications;
-    }
-
-
-
 
     public int sizeFriends() {
         return friends.size();

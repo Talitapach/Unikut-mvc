@@ -26,13 +26,15 @@ public class ViewRegister {
         System.out.print("Create a password: ");
         String password = s.next();
         while(PasswordValidation.Validation(password) == false){
+            System.out.println("Must Have at least 6 characteres");
             System.out.println("The password must contain an uppercase letter, a number and a minimum number of 6 digits");
             password = s.next();
         }
                     
                 
         System.out.print("Tell your name: ");
-        String name = s.next();
+        String name = s.nextLine();
+        name = s.nextLine();
 
         System.out.println("Are you an admin? ");
         System.out.println("1 - Yes");
