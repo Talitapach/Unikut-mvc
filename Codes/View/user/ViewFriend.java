@@ -55,13 +55,25 @@ public class ViewFriend {
 
         System.out.println("Tell the Username you want to add");
         String userToAdd = s.next();
-        while (userToAdd.equals(userName) || Friend.searchFriend(userName, userToAdd)){
+        while (userToAdd.equals(userName) || Friend.searchFriend(userName, userToAdd) || Friend.searchRequest(userName, userToAdd)){
             if(Friend.searchFriend(userName, userToAdd)){
                 System.out.println("You are already friends, write a valid user");
                 userToAdd = s.next();  
+                if(Singleton.searchUser(userToAdd) == null){
+                    break;
+                }
+            }else if(Friend.searchRequest(userName, userToAdd)){
+                System.out.println("You are already send a friend request, try another user");
+                userToAdd = s.next();
+                if(Singleton.searchUser(userToAdd) == null){
+                    break;
+                }
             }else{
                 System.out.println("You can't request yourself as a friend, write a valid user");
                 userToAdd = s.next();  
+                if(Singleton.searchUser(userToAdd) == null){
+                    break;
+                }
             }
         }
         boolean f = Friend.addRequest(userName, userToAdd);

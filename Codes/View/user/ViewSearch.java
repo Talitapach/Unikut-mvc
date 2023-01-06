@@ -22,6 +22,9 @@ public class ViewSearch {
             System.out.println(" ");
             if(Friend.searchFriend(userName, userSearched)){
                 System.out.println("you and " + userSearched + " are friends");
+            }else if(Friend.searchRequest(userName, userSearched)){
+                System.out.println("you and " + userSearched + " are not friends");
+                System.out.println("pending request");
             }else{
                 System.out.println("you and " + userSearched + " are not friends");
                 System.out.println("do you want to be friends with " + userSearched + " ? yes/no");

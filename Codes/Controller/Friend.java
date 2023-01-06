@@ -68,9 +68,18 @@ public class Friend extends User{
         }
     }
 
-    public static boolean searchFriend(String userName, String userName2){
+    public static boolean searchFriend(String userName, String userToAdd){
         for(User user : Singleton.searchUser(userName).getFriends()){
-            if(userName2.equals(user.getUserName())){
+            if(userToAdd.equals(user.getUserName())){
+                return true;
+            }
+        }
+        return false; 
+    }
+
+    public static boolean searchRequest(String userName, String userToAdd){
+        for(User user : Singleton.searchUser(userToAdd).getFriendsRequest()){
+            if(userName.equals(user.getUserName())){
                 return true;
             }
         }

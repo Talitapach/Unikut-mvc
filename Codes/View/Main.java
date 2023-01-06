@@ -42,3 +42,7 @@ public class Main {
       }
     }
 }
+
+
+
+//BUG NO REQUEST DE AMIGOS 
