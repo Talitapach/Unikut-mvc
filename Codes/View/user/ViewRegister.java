@@ -16,11 +16,11 @@ public class ViewRegister {
         Singleton.getInstanceAdm();
         Singleton.getInstanceCommon();
         System.out.print("Create a Username: ");
-        String userName = s.next();
+        String userName = s.next().toLowerCase();
 
         while(UserNameValidation.Validation(userName)){
             System.out.println("This username already exist, try a new one");
-            userName = s.next();
+            userName = s.next().toLowerCase();
         }
             
         System.out.print("Create a password: ");
@@ -33,8 +33,8 @@ public class ViewRegister {
                     
                 
         System.out.print("Tell your name: ");
-        String name = s.nextLine();
-        name = s.nextLine();
+        String name = s.nextLine().toLowerCase();
+        name = s.nextLine().toLowerCase();
 
         System.out.println("Are you an admin? ");
         System.out.println("1 - Yes");

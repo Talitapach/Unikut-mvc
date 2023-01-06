@@ -14,7 +14,7 @@ public class ViewLogin {
         int option;
 
         System.out.print("Username: ");
-        String userName = s.next();
+        String userName = s.next().toLowerCase();
         System.out.print("Password: ");
         String password = s.next();
         boolean b = Login.verificationLogin(userName, password);

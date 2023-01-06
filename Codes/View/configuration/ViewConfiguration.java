@@ -32,13 +32,13 @@ public class ViewConfiguration {
         switch (option) {
           case 1:
             System.out.print("Tell your new Name: ");
-            String newName = s.next();
+            String newName = s.next().toLowerCase();
             Singleton.EditAccount(newName, userName, password, option);
             System.out.println("Name successfully changed");
             break;
           case 2:
             System.out.print("Tell your new UserName: ");
-            String newUser = s.next();
+            String newUser = s.next().toLowerCase();
             Singleton.EditAccount(newUser, userName, password, option);
             System.out.println("Username successfully changed");
             break;
@@ -72,9 +72,7 @@ public class ViewConfiguration {
               } else {
                 System.out.println("You cannot delete another admin account");
               }
-            }
-           
-            
+            }         
             break;
           case 0:
             break;
